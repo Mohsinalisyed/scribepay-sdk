@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
@@ -36,6 +37,7 @@ export default function Home() {
 
   const providerConfig: ProviderConfig = {
     apiKey: "1JbRLLjQphKdv72q8ZoxFr2t",
+    provider: provider
   };
 
   const { businessData } = useInitializeSDK(providerConfig);
@@ -88,15 +90,14 @@ export default function Home() {
           <h3>Integartion With Custom UI </h3>
           <div className="custom-wrapper">
             <div>
-              <div>Amount From : 0.01 PKR</div>
-              <div>
+              <div style={{ marginBottom: "16px" }}>Amount From : 0.01 PKR</div>
+              <div style={{ marginBottom: "16px" }}>
                 Amount To :{" "}
                 {currencyResData !== null
                   ? currencyResData?.rate.toFixed(4)
-                  : "-"}
+                  : "-"}{" "}
                 {currencyResData !== null ? currencyResData?.to : "-"}{" "}
               </div>
-              <div></div>
             </div>
             {/* Token selection dropdown */}
             <div>
