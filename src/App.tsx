@@ -7,14 +7,14 @@ import {
   useInitializeSDK,
   usePay,
   usePayErc20,
-} from "scribepay-sdk/src";
-import { ProviderConfig } from "scribe-sdk/src/types";
+} from "scribepay-sdk";
+import { ProviderConfig } from "scribepay-sdk";
 import "./App.css"; // Import the CSS file
 interface IToken {
   value: string;
   label: string;
 }
-
+const apiKey = import.meta.env.VITE_API_KEY;
 export default function Home() {
   const [provider, setProvider] = useState<ethers.BrowserProvider | undefined>(
     undefined
@@ -35,8 +35,9 @@ export default function Home() {
     }
   }, []);
 
+  console.log('========= ', apiKey)
   const providerConfig: ProviderConfig = {
-    apiKey: "1JbRLLjQphKdv72q8ZoxFr2t",
+    apiKey: apiKey,
     provider: provider
   };
 
@@ -53,14 +54,14 @@ export default function Home() {
   const { payNativeToken, currencyResData } = usePay({
     amount: "0.01",
     expectedDelivery: 11111111,
-    fromCurrency: "PKR",
+    fromCurrency: "USD",
     token: { value: selectedToken.value, label: selectedToken.label },
   });
 
   const { payERC20Token } = usePayErc20({
     amount: "1",
     expectedDelivery: 11111111,
-    fromCurrency: "PKR",
+    fromCurrency: "USD",
     token: { value: selectedToken.value, label: selectedToken.label },
   });
 
@@ -75,22 +76,24 @@ export default function Home() {
   };
   return (
     <main>
-      <h1>ScribePay SDK </h1>
+      <div className="h1">
+        <h1>ScribePay Demo </h1>
+      </div>
       <div className="main-wrapper">
         <div className="container">
           <h3>Integartion With ScribePay UI </h3>
           <Payment
             amount="0.01"
             expectedDelivery={timePlus3Minutes}
-            theme="light"
-            fromCurrency="PKR"
+            theme="dark"
+            fromCurrency="USD"
           />
         </div>
         <div className="container">
           <h3>Integartion With Custom UI </h3>
           <div className="custom-wrapper">
             <div>
-              <div style={{ marginBottom: "16px" }}>Amount From : 0.01 PKR</div>
+              <div style={{ marginBottom: "16px" }}>Amount From : 0.01 USD</div>
               <div style={{ marginBottom: "16px" }}>
                 Amount To :{" "}
                 {currencyResData !== null
@@ -126,27 +129,29 @@ export default function Home() {
             {error && <p className="error-message">{error}</p>}
 
             {/* Payment buttons */}
-            <div className="button-container mt-6">
-              <button
-                onClick={() => handlePay(payNativeToken)} // Trigger payment on button click
-                className="button pay-native"
-                disabled={
-                  selectedToken.value !==
-                  "0x0000000000000000000000000000000000000000"
-                }
-              >
-                Pay Native
-              </button>
-              <button
-                onClick={() => handlePay(payERC20Token)} // Trigger payment on button click
-                className="button pay-erc20"
-                disabled={
-                  selectedToken.value !==
-                  "0x4335D1397c05aB2CE2Ad090fB8b19FFF706e001d"
-                }
-              >
-                Pay ERC20
-              </button>
+            <div className="custom-button-wrapper">
+              <div className="button-container mt-6">
+                <button
+                  onClick={() => handlePay(payNativeToken)} // Trigger payment on button click
+                  className="button pay-native"
+                  disabled={
+                    selectedToken.value !==
+                    "0x0000000000000000000000000000000000000000"
+                  }
+                >
+                  Pay Native
+                </button>
+                <button
+                  onClick={() => handlePay(payERC20Token)} // Trigger payment on button click
+                  className="button pay-erc20"
+                  disabled={
+                    selectedToken.value !==
+                    "0x4335D1397c05aB2CE2Ad090fB8b19FFF706e001d"
+                  }
+                >
+                  Pay ERC20
+                </button>
+              </div>
             </div>
           </div>
         </div>

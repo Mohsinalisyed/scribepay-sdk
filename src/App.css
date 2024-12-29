@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f7fafc;
+  background-color: #003464cb;
   /* Light gray background */
 }
 h1 {
@@ -24,19 +24,27 @@ h1 {
 .container {
   width: 100%;
   max-width: 500px;
-  background-color: white;
+  background-color: rgb(90, 125, 153);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 h3 {
   text-align: center;
+  font-size: 1.6em;
 }
 .custom-wrapper {
   display: flex;
-  padding-top: 100px;
+  padding-top: 75px;
   flex-direction: column;
 }
+
+.custom-button-wrapper {
+  display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+}
+
 /* Button container styles */
 .button-container {
   display: flex;
@@ -96,7 +104,7 @@ h3 {
 /* Pay Native Button Styles */
 .pay-native {
   background-color: #3182ce;
-  color: white;
+  color: rgb(51, 51, 51);
 }
 
 .pay-native:not(:disabled):hover {
@@ -107,7 +115,7 @@ h3 {
 /* Pay ERC20 Button Styles */
 .pay-erc20 {
   background-color: #38a169;
-  color: white;
+  color: rgb(51, 51, 51);
 }
 
 .pay-erc20:not(:disabled):hover {
