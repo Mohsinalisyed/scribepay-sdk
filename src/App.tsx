@@ -93,13 +93,18 @@ export default function Home() {
           <h3>Integartion With Custom UI </h3>
           <div className="custom-wrapper">
             <div>
-              <div style={{ marginBottom: "16px" }}>Amount From : 0.01 USD</div>
+              <div style={{ marginBottom: "16px" }}>
+                Amount From : 0.01{" "}
+                <span style={{ fontWeight: "bold" }}>(USD)</span>
+              </div>
               <div style={{ marginBottom: "16px" }}>
                 Amount To :{" "}
                 {currencyResData !== null
                   ? currencyResData?.rate.toFixed(4)
                   : "-"}{" "}
-                {currencyResData !== null ? currencyResData?.to : "-"}{" "}
+                <span style={{ fontWeight: "bold" }}>
+                  {currencyResData !== null ? <>({currencyResData?.to})</> : "-"}
+                </span>
               </div>
             </div>
             {/* Token selection dropdown */}
