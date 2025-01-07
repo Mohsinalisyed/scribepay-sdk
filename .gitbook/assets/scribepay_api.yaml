@@ -1,0 +1,1313 @@
+{
+  "x-info": {
+    "_postman_id": "67c38e64-b020-492c-975f-ba63157e4a1b",
+    "name": "Scribe",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "10222998",
+    "_collection_link": "https://warped-sunset-983535.postman.co/workspace/Team-Workspace~74410d43-0e8f-42dc-8dee-c97f67732571/collection/10222998-67c38e64-b020-492c-975f-ba63157e4a1b?action=share&source=collection_link&creator=10222998"
+  },
+  "x-item": [
+    {
+      "name": "Business",
+      "item": [
+        {
+          "name": "GetBusinessOwner",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNkZjQ1OWIxODM5OWZjZGE0NGNkNzciLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJ1c2VybmFtZSI6ImFsaXN5ZWRtYWNjb3VudDVAZ21haWwuY29tIiwiYWRkcmVzcyI6IjB4YTNkMjQwYjlmZjBkNTRiMzE0N2MzMGEwNzkzOTBmMDYwZjg1OWUxMyIsImlhdCI6MTczMjExMzcyNCwiZXhwIjoxNzYzNjQ5NzI0fQ.1pcNOPziXkAmJspVCArG8GWzhhtXkpcQTY5q3kTGxPQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/business?isActive=true",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "business"
+              ],
+              "query": [
+                {
+                  "key": "isActive",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetBusiness",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNhZDUxMTE5NzU5Zjg2OTczNTg0MzQiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJ1c2VybmFtZSI6InNtb2hpYjk0NUBnbWFpbC5jb20iLCJpYXQiOjE3MjY2NTg1NjksImV4cCI6MTc1ODE5NDU2OX0.aLfaSBNndrOhZAG68ysAthvBStdt6AwrzClS-6tAc5o",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{SCRIBE}}/api/business/",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetBusinessInitial",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNhZDUxMTE5NzU5Zjg2OTczNTg0MzQiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJ1c2VybmFtZSI6InNtb2hpYjk0NUBnbWFpbC5jb20iLCJpYXQiOjE3MjY2NTg1NjksImV4cCI6MTc1ODE5NDU2OX0.aLfaSBNndrOhZAG68ysAthvBStdt6AwrzClS-6tAc5o",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{SCRIBE}}/api/business/",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetBusinessValidate",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNhZDUxMTE5NzU5Zjg2OTczNTg0MzQiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJ1c2VybmFtZSI6InNtb2hpYjk0NUBnbWFpbC5jb20iLCJpYXQiOjE3MjY2NTg1NjksImV4cCI6MTc1ODE5NDU2OX0.aLfaSBNndrOhZAG68ysAthvBStdt6AwrzClS-6tAc5o",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{SCRIBE}}/api/business/validate-business?name=Mohsin Ali Syedjdksjd&wallet=0x12AfA9F380A826EAeEC48a08ca90Bf4d126Bf0bC&chains={\"chainId\":\"97\",\"supportedTokens\":[{\"tokenName\":\"BNB\",\"tokenAddress\":\"0x0000000000000000000000000000000000000000\"}]}",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                "validate-business"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Mohsin Ali Syedjdksjd"
+                },
+                {
+                  "key": "wallet",
+                  "value": "0x12AfA9F380A826EAeEC48a08ca90Bf4d126Bf0bC"
+                },
+                {
+                  "key": "chains",
+                  "value": "{\"chainId\":\"97\",\"supportedTokens\":[{\"tokenName\":\"BNB\",\"tokenAddress\":\"0x0000000000000000000000000000000000000000\"}]}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetBusinessByAPIKey",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNhZDUxMTE5NzU5Zjg2OTczNTg0MzQiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJ1c2VybmFtZSI6InNtb2hpYjk0NUBnbWFpbC5jb20iLCJpYXQiOjE3MjY2NTg1NjksImV4cCI6MTc1ODE5NDU2OX0.aLfaSBNndrOhZAG68ysAthvBStdt6AwrzClS-6tAc5o",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "UMz7joVyyvhktoioUXTYslcH",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{SCRIBE}}/api/business/RhyMoukyrPt3xFenpuE5ARkr",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                "RhyMoukyrPt3xFenpuE5ARkr"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetBusinessByID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzBhYWI0ZDBjMDVmZDM0OTFhMmIyYTMiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJwcm9maWxlUGljIjoiemRiUlhVX2ltYWdlICgzKS5wbmciLCJ1c2VybmFtZSI6InNtb2hpYjk0NUBnbWFpbC5jb20iLCJhZGRyZXNzIjoiMHhkMDBmYWY3YzJhODM3ZGM0NTczODk3NThlYTEyNzFhZTYyNTZkYzQ0IiwiaWF0IjoxNzI5MzM4NzQ4LCJleHAiOjE3NjA4NzQ3NDh9.E_Xq4Y56YbvCzoZx9KTZVK-itv8c7dIhGEUmKPqh9Q4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/business/670eb66b4f97243e9812a691",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "business",
+                "670eb66b4f97243e9812a691"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PostBusiness",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzU1YTlmODBlMmM0ZTUwYmFlOTk3YmMiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJ1c2VybmFtZSI6Im1vaHNpbmFsaXN5ZWRAeW9wbWFpbC5jb20iLCJhZGRyZXNzIjoiMHg4OTEyYWU5YjAzYzIyMDk1NzJiMGMyY2VjZTA5MjVkOWFiMzYzODQ4IiwiaWF0IjoxNzMzNjY4NTQzLCJleHAiOjE3NjUyMDQ1NDN9.mCVxWCZWTg5ak6CDpNr1lmzCOPMBtlumy61pJX-CKeM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Hexagon ARDDD",
+                  "type": "text"
+                },
+                {
+                  "key": "owner",
+                  "value": "676335ae3b26240aee1f8c15",
+                  "type": "text"
+                },
+                {
+                  "key": "tx",
+                  "value": "0xb1c0cd030567d7749d54a64ad5aa987e88ece180e3d1a3599ca638de17333614",
+                  "type": "text"
+                },
+                {
+                  "key": "wallet",
+                  "value": "0xF39CD8BdeB6000742739cbBB2b80B1591a40025a",
+                  "type": "text"
+                },
+                {
+                  "key": "chains[chainId]",
+                  "value": "97",
+                  "type": "text"
+                },
+                {
+                  "key": "chains[supportedTokens][0][tokenAddress]",
+                  "value": "0x0000000000000000000000000000000000000000",
+                  "type": "text"
+                },
+                {
+                  "key": "chains[supportedTokens][0][tokenName]",
+                  "value": "BNB",
+                  "type": "text"
+                },
+                {
+                  "key": "chains[supportedTokens][1][tokenAddress]",
+                  "value": "0x0000000000000000000000000000000000000000",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[supportedTokens][1][tokenName]",
+                  "value": "BNB",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[supportedTokens][2][tokenAddress]",
+                  "value": "0x0000000000000000000000000000000000000000",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[supportedTokens][2][tokenName]",
+                  "value": "BNB",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[0][supportedTokens][1][tokenAddress]",
+                  "value": "0x0000000000000000000000000000000000000000",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[0][supportedTokens][1][tokenName]",
+                  "value": "POL",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[0][supportedTokens][2][tokenAddress]",
+                  "value": "0x0000000000000000000000000000000000000000",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[0][supportedTokens][2][tokenName]",
+                  "value": "BNB",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "hasValidated",
+                  "value": "0",
+                  "type": "text"
+                },
+                {
+                  "key": "logo",
+                  "type": "file",
+                  "src": [],
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/business/",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "business",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PutBusiness",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNhZDUxMTE5NzU5Zjg2OTczNTg0MzQiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJ1c2VybmFtZSI6InNtb2hpYjk0NUBnbWFpbC5jb20iLCJpYXQiOjE3MjQ1NzA4OTgsImV4cCI6MTc1NjEwNjg5OH0.yYKwTl4u-02IBFE_hAM3HUvy6Y7vCPlcoHTpP5aWLAE",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "id",
+                  "value": "6767ede1239fbdac5c4616c5",
+                  "type": "text"
+                },
+                {
+                  "key": "name",
+                  "value": "HW",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "owner",
+                  "value": "670aab4d0c05fd3491a2b2a3",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "tx",
+                  "value": "0x6113767cd05d2dd06de055ee6fdfab98164d8b6c470a36264fc17cdfdd73d599",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "wallet",
+                  "value": "0x6b4290b1aD4F6E38C2f356676d3275822463a713",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[chainId]",
+                  "value": "97",
+                  "type": "text"
+                },
+                {
+                  "key": "chains[isActive]",
+                  "value": "true",
+                  "type": "text"
+                },
+                {
+                  "key": "chains[supportedTokens][0][tokenAddress]",
+                  "value": "0x0000000000000000000000000000000000000000",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[supportedTokens][0][tokenName]",
+                  "value": "BNB",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[supportedTokens][1][tokenAddress]",
+                  "value": "0x0000000000000000000000000000000000000000",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[supportedTokens][1][tokenName]",
+                  "value": "POL",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[supportedTokens][2][tokenAddress]",
+                  "value": "0x4335D1397c05aB2CE2Ad090fB8b19FFF706e001d",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[supportedTokens][2][tokenName]",
+                  "value": "cDILLOM",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[0][supportedTokens][1][tokenAddress]",
+                  "value": "0x4335D1397c05aB2CE2Ad090fB8b19FFF706e001d",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[0][supportedTokens][1][tokenName]",
+                  "value": "cDILLOM",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[0][supportedTokens][2][tokenAddress]",
+                  "value": "0x3C9A256Ebd4366B0a1036F3d8eC9AA85226FA776",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "chains[0][supportedTokens][2][tokenName]",
+                  "value": "cPENTESTER",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/business/",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "business",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PostGenerateAPIKey",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNhZDUxMTE5NzU5Zjg2OTczNTg0MzQiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJ1c2VybmFtZSI6InNtb2hpYjk0NUBnbWFpbC5jb20iLCJpYXQiOjE3MjQ1NzA4OTgsImV4cCI6MTc1NjEwNjg5OH0.yYKwTl4u-02IBFE_hAM3HUvy6Y7vCPlcoHTpP5aWLAE",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/business/generate_api_key",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "business",
+                "generate_api_key"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteBusiness",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "isActive",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/business/",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "business",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "firstName",
+                  "value": "Syed",
+                  "type": "text"
+                },
+                {
+                  "key": "lastName",
+                  "value": "Mohib",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "pron",
+                  "type": "text"
+                },
+                {
+                  "key": "confirmPassword",
+                  "value": "pron",
+                  "type": "text"
+                },
+                {
+                  "key": "username",
+                  "value": "shahmohsin873@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "address",
+                  "value": "0xd00faF7c2a837DC457389758Ea1271aE6256dc44",
+                  "type": "text"
+                },
+                {
+                  "key": "phone",
+                  "value": "+9134334554",
+                  "type": "text"
+                },
+                {
+                  "key": "profilePic",
+                  "type": "file",
+                  "src": "/Users/syedmohib/Downloads/9707.png",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/auth/register",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "smohib945@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "12345678",
+                  "type": "text"
+                },
+                {
+                  "key": "address",
+                  "value": "0xd00faF7c2a837DC457389758Ea1271aE6256dc44",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/auth/login",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "smohib945@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "pron",
+                  "type": "text"
+                },
+                {
+                  "key": "address",
+                  "value": "0xd00faF7c2a837DC457389758Ea1271aE6256dc44",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/profile/logout",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "profile",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ForgotPassword",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": " smohib945@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "googleCaptcha",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/auth/forgot-password",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "forgot-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ResetPassword",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "code",
+                  "value": " ",
+                  "type": "text"
+                },
+                {
+                  "key": "newPassword",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "confirmPassword",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/auth/reset-password",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "reset-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Resend Verification Email",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": " ",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/auth/reset-password",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "reset-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ChangePassword",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzBhYWI0ZDBjMDVmZDM0OTFhMmIyYTMiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJwcm9maWxlUGljIjoicTFYMzZvXzk3MDcucG5nIiwidXNlcm5hbWUiOiJzbW9oaWI5NDVAZ21haWwuY29tIiwiYWRkcmVzcyI6IjB4ZDAwZmFmN2MyYTgzN2RjNDU3Mzg5NzU4ZWExMjcxYWU2MjU2ZGM0NCIsImlhdCI6MTcyOTEwMTQ3OSwiZXhwIjoxNzYwNjM3NDc5fQ.S9c_I2D_iBNysxpF9pLkFt-8lUzfTZ1v1GaR2OXAOwA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "currentPassword",
+                  "value": "pron",
+                  "type": "text"
+                },
+                {
+                  "key": "newPassword",
+                  "value": "12345678",
+                  "type": "text"
+                },
+                {
+                  "key": "confirmPassword",
+                  "value": "12345678",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/profile/change-password",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "profile",
+                "change-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PutProfile",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzBhYWI0ZDBjMDVmZDM0OTFhMmIyYTMiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJwcm9maWxlUGljIjoicTFYMzZvXzk3MDcucG5nIiwidXNlcm5hbWUiOiJzbW9oaWI5NDVAZ21haWwuY29tIiwiYWRkcmVzcyI6IjB4ZDAwZmFmN2MyYTgzN2RjNDU3Mzg5NzU4ZWExMjcxYWU2MjU2ZGM0NCIsImlhdCI6MTcyOTEwMTQ3OSwiZXhwIjoxNzYwNjM3NDc5fQ.S9c_I2D_iBNysxpF9pLkFt-8lUzfTZ1v1GaR2OXAOwA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "firstName",
+                  "value": "Any",
+                  "type": "text"
+                },
+                {
+                  "key": "lastName",
+                  "value": "thing",
+                  "type": "text"
+                },
+                {
+                  "key": "address",
+                  "value": "0xd00faF7c2a837DC457389758Ea1271aE6256dc44",
+                  "type": "text"
+                },
+                {
+                  "key": "phone",
+                  "value": "+921123123",
+                  "type": "text"
+                },
+                {
+                  "key": "profilePic",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/profile/",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "profile",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetProfile",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzBhYWI0ZDBjMDVmZDM0OTFhMmIyYTMiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJwcm9maWxlUGljIjoicTFYMzZvXzk3MDcucG5nIiwidXNlcm5hbWUiOiJzbW9oaWI5NDVAZ21haWwuY29tIiwiYWRkcmVzcyI6IjB4ZDAwZmFmN2MyYTgzN2RjNDU3Mzg5NzU4ZWExMjcxYWU2MjU2ZGM0NCIsImlhdCI6MTcyOTEwMTQ3OSwiZXhwIjoxNzYwNjM3NDc5fQ.S9c_I2D_iBNysxpF9pLkFt-8lUzfTZ1v1GaR2OXAOwA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "firstName",
+                  "value": "Any",
+                  "type": "text"
+                },
+                {
+                  "key": "lastName",
+                  "value": "thing",
+                  "type": "text"
+                },
+                {
+                  "key": "address",
+                  "value": "0xd00faF7c2a837DC457389758Ea1271aE6256dc44",
+                  "type": "text"
+                },
+                {
+                  "key": "phone",
+                  "value": "+921123123",
+                  "type": "text"
+                },
+                {
+                  "key": "profilePic",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/profile/",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "profile",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RefreshToken",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "refreshToken",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/auth/refresh-token",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "refresh-token"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Transaction",
+      "item": [
+        {
+          "name": "PostTransaction",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "M3DmUocuxF9WhPjO938xixWB",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "tx",
+                  "value": "0x431c174d8b7c18214c9cbb06f5f74de6231f94fe2b8993e9f134c2bbce75745d",
+                  "type": "text"
+                },
+                {
+                  "key": "status",
+                  "value": "PENDING",
+                  "type": "text"
+                },
+                {
+                  "key": "wallet",
+                  "value": "0xd00faF7c2a837DC457389758Ea1271aE6256dc44",
+                  "type": "text"
+                },
+                {
+                  "key": "amount",
+                  "value": "0.001",
+                  "type": "text"
+                },
+                {
+                  "key": "token",
+                  "value": "0x0000000000000000000000000000000000000000",
+                  "type": "text"
+                },
+                {
+                  "key": "chain",
+                  "value": "80002",
+                  "type": "text"
+                },
+                {
+                  "key": "tokenAmount",
+                  "value": "0.0021263792227233388",
+                  "type": "text"
+                },
+                {
+                  "key": "currency",
+                  "value": "USD",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/transaction",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "transaction"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GeTransaction",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzBiYjIyNDY4NTdmMjIwNjQzMjg1MzAiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJwcm9maWxlUGljIjoiOGl6ejA1X2ltYWdlLnBuZyIsInVzZXJuYW1lIjoic2hhaG1vaHNpbjg3M0BnbWFpbC5jb20iLCJhZGRyZXNzIjoiMHg2OGIzY2I3ODkyOTI3NjYxNTYwNjA4NzNiYmM4N2Y2NmUxOTlhZWE0IiwiaWF0IjoxNzI5MzUwODE5LCJleHAiOjE3NjA4ODY4MTl9.45s2_FIoxeKJ4mqtdBrK8fg1xicVf-sZmaMIhT4QkHA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/transaction/0x0305F7A55d59635f17662f00F61876e6819cA90e",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "transaction",
+                "0x0305F7A55d59635f17662f00F61876e6819cA90e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GeTransactionByAPI",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "M3DmUocuxF9WhPjO938xixWB",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/transaction",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "transaction"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GeTransactionByKey",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "cU3ADI9V1unGcSGKHpuJFvot",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{SCRIBE}}/api/transaction/:wallet",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "transaction",
+                ":wallet"
+              ],
+              "variable": [
+                {
+                  "key": "wallet",
+                  "value": "0xd00faF7c2a837DC457389758Ea1271aE6256dc44",
+                  "type": "string",
+                  "description": "Buyer Wallet address"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PutTransaction",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "FjcrRVAScPLBDgJRFc9B4OZv",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "tx",
+                  "value": "0x936b3e6eb3e8db34ad7c3ae8b4219df6703821592f736547d5ea053c609399b2",
+                  "type": "text"
+                },
+                {
+                  "key": "status",
+                  "value": "SUCCESS",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/transaction",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "transaction"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PutTransactionData",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNlNDAyYzE3NDJlNDAwNWY1MzlkNDAiLCJ0eXBlT2ZVc2VyIjoib3duZXIiLCJ1c2VybmFtZSI6Im1vaHNpbjU3QHlvcG1haWwuY29tIiwiYWRkcmVzcyI6IjB4ZWVkMDEyM2Y1NWY0YjMzNDc2NzNjNDEyODUyNmM4YWM0NTk2YjUzOCIsImlhdCI6MTczMjEzMjk0OCwiZXhwIjoxNzYzNjY4OTQ4fQ.iuKNVpmFCNmajRcUCNbvadrUXXGlsgm69RQOahQM2oU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n    {\n        \"tx\": \"0x0b35dc82fd5561d4cb139d1790a9cf076ef49b868c68a55691923c4d4a9a4e42\",\n        \"chain\": 80002,\n        \"newTx\": \"0xaf6a3fa2b8175b6d5e1ceac59828502242e026288879faba0cb35f999f233a40\"\n    },\n    {\n        \"tx\": \"0x08c30fbe273c1b55f778cd6fc970c4999e54c7f655214f79192780db6fb361bb\",\n        \"chain\": 80002,\n        \"newTx\": \"0xaf6a3fa2b8175b6d5e1ceac59828502242e026288879faba0cb35f999f233a40\"\n    }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/user/transaction/update",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "transaction",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Exchange",
+      "item": [
+        {
+          "name": "GetRate",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "M3DmUocuxF9WhPjO938xixWB",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "{{SCRIBE}}/api/exchange/?amount=0.001&from=USD&to=POL&chainId=80002",
+              "host": [
+                "{{SCRIBE}}"
+              ],
+              "path": [
+                "api",
+                "exchange",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "amount",
+                  "value": "0.001"
+                },
+                {
+                  "key": "from",
+                  "value": "USD"
+                },
+                {
+                  "key": "to",
+                  "value": "POL"
+                },
+                {
+                  "key": "chainId",
+                  "value": "80002"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
