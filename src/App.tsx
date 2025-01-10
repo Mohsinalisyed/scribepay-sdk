@@ -7,8 +7,8 @@ import {
   useInitializeSDK,
   usePay,
   usePayErc20,
-} from "scribepay-sdk";
-import { ProviderConfig } from "scribepay-sdk";
+} from "scribepay-sdk/src";
+import { ProviderConfig } from "scribepay-sdk/src";
 import "./App.css"; // Import the CSS file
 interface IToken {
   value: string;
@@ -25,7 +25,7 @@ export default function Home() {
   });
   const [error, setError] = useState<string>(""); // To store error message
   const currentTime = Math.floor(Date.now() / 1000);
-  const timePlus3Minutes = currentTime + 3 * 60;
+  const timePlus3Minutes = currentTime + 2 * 60;
 
   useEffect(() => {
     const { ethereum } = window;
@@ -42,7 +42,6 @@ export default function Home() {
   };
 
   const { businessData } = useInitializeSDK(providerConfig);
-
   // Handle token selection change
   const handleTokenChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { value, options } = event.target;
@@ -53,14 +52,14 @@ export default function Home() {
 
   const { payNativeToken, currencyResData } = usePay({
     amount: "0.01",
-    expectedDelivery: 11111111,
+    expectedDelivery: timePlus3Minutes,
     fromCurrency: "USD",
     token: { value: selectedToken.value, label: selectedToken.label },
   });
 
   const { payERC20Token } = usePayErc20({
     amount: "1",
-    expectedDelivery: 11111111,
+    expectedDelivery: timePlus3Minutes,
     fromCurrency: "USD",
     token: { value: selectedToken.value, label: selectedToken.label },
   });
