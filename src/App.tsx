@@ -26,6 +26,8 @@ export default function Home() {
   const [error, setError] = useState<string>(""); // To store error message
   const currentTime = Math.floor(Date.now() / 1000);
   const timePlus3Minutes = currentTime + 2 * 60;
+const [decimals, setDecimals] = useState<number>(18);
+
 
   useEffect(() => {
     const { ethereum } = window;
@@ -47,6 +49,15 @@ export default function Home() {
     const { value, options } = event.target;
     const label = options[options.selectedIndex].text;
     setSelectedToken({ value, label });
+      const selectedTokenData = businessData?.chains[0]?.supportedTokens.find(
+    (token: { tokenAddress: string }) => token.tokenAddress === value
+  );
+
+  if (selectedTokenData) {
+    setDecimals(selectedTokenData.tokenDecimals);
+  } else {
+    setDecimals(18);
+  }
     setError(""); // Reset error when a new token is selected
   };
 
@@ -62,16 +73,16 @@ export default function Home() {
     expectedDelivery: timePlus3Minutes,
     fromCurrency: "USD",
     token: { value: selectedToken.value, label: selectedToken.label },
+    decimals: decimals,
   });
 
   const handlePay = (payFunction: () => void) => {
-    // Validation: Check if a token is selected
     if (!selectedToken.value) {
       setError("Please select a token before proceeding.");
       return;
     }
-    setError(""); // Clear error if valid token is selected
-    payFunction(); // Proceed with payment if token is valid
+    setError("");
+    payFunction();
   };
   return (
     <main>
@@ -148,9 +159,9 @@ export default function Home() {
                 <button
                   onClick={() => handlePay(payERC20Token)} // Trigger payment on button click
                   className="button pay-erc20"
-                  disabled={
-                    selectedToken.value !==
-                    "0x4335D1397c05aB2CE2Ad090fB8b19FFF706e001d"
+                     disabled={
+                    selectedToken.value ===
+                    "0x0000000000000000000000000000000000000000"
                   }
                 >
                   Pay ERC20
